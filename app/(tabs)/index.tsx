@@ -108,18 +108,27 @@ const Item = ({title}: ItemProps) => (
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
       <Text style={styles.title}>Nearest Stations</Text>
+      
+      </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-        <ScrollView contentContainerStyle={{padding:5, borderWidth:1, borderColor:'black'}}>
+      
+       
           <FlatList 
+            style={{margin:5}}
+            nestedScrollEnabled={true}
             data={DATA}
             renderItem={({item}) => <Item title={item.title} until={item.until} line={item.line}/>}/> 
-        </ScrollView>
-        <ScrollView contentContainerStyle={{padding:5, borderWidth:1, borderColor:'black'}}>
+        
+        
           <FlatList 
+          style={{margin:5}}
+          nestedScrollEnabled={true}
             data={DATA} 
             renderItem={({item}) => <Item title={item.title} until={item.until} line={item.line}/>}/>
-        </ScrollView>
+        
+        
       <EditScreenInfo path="app/(tabs)/index.tsx" />
     </View>
   );
@@ -150,5 +159,8 @@ const styles = StyleSheet.create({
   },
   flatlist: {
     padding:5
+  },
+  header: {
+
   },
 });
