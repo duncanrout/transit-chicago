@@ -114,14 +114,14 @@ export default function TabOneScreen() {
       </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       
-       
+       <Text> Inbound </Text>
           <FlatList 
             style={{margin:5}}
             nestedScrollEnabled={true}
             data={DATA}
             renderItem={({item}) => <Item title={item.title} until={item.until} line={item.line}/>}/> 
         
-        
+        <Text> Outbound </Text>
           <FlatList 
           style={{margin:5}}
           nestedScrollEnabled={true}
