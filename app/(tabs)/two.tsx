@@ -5,6 +5,7 @@ import { Text, View } from '../../components/Themed';
 
 import React from 'react';
 import ApiExample from '../../components/ApiExample';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 
@@ -15,8 +16,9 @@ export default function TabTwoScreen() {
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="app/(tabs)/two.tsx" />
       <Text> Hey! This tab is just an example of the API and will be deleted in a future iteration</Text>
-      <ApiExample />
-    </View>  
+      <ScrollView><ApiExample /></ScrollView>
+      
+    </View>   
   );  
 }
 
