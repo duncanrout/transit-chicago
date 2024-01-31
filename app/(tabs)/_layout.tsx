@@ -1,6 +1,7 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
+import { Text } from '../../components/Themed';
 
 import Colors from '../../constants/Colors';
 
@@ -27,8 +28,9 @@ export default function TabLayout() {
         options={{
           title: 'Tab One',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
+          headerRight: () => (<>
+          <Text>(Replace w search button)</Text>
+            <Link href="/search" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
@@ -40,6 +42,7 @@ export default function TabLayout() {
                 )}
               </Pressable>
             </Link>
+            </>
           ),
         }}
       />
