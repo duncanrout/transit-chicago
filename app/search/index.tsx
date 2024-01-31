@@ -1,11 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, Pressable, StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-
-import { Link } from "expo-router";
-import ColorSearchLink from '../components/ColorSearchLink';
+import { Text, View } from '../../components/Themed';
+import ColorSearchLink from '../../components/ColorSearchLink';
 
 export default function SearchScreen() {
   return (
@@ -18,15 +15,16 @@ export default function SearchScreen() {
       <ColorSearchLink color="brown"/>
       <ColorSearchLink color="green"/>
       <ColorSearchLink color="orange"/>
-
-
+      <ColorSearchLink color="purple"/>
+      <ColorSearchLink color="pink"/>
+      <ColorSearchLink color="yellow"/>
 
       {/* Use a light status bar on iOS to account for the black space above the Search */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
 }
-
+ 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
