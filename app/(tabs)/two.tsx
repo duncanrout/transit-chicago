@@ -14,7 +14,7 @@ export default function TabTwoScreen() {
      <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+      
       <Text> Hey! This tab is just an example of the API and will be deleted in a future iteration</Text>
       <ScrollView><ApiExample /></ScrollView>
       
