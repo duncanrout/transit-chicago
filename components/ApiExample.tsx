@@ -5,6 +5,13 @@ import { parseString } from 'react-native-xml2js';
 // https://www.transitchicago.com/developers/ttdocs/ <-- docs
 
 export default function ApiExample() {
+  // The following urls grab the stpid (stop ids) which specifically looks the stations information of trains going in either direction.
+  // Example of Diversey, first three trains north: 30103
+  // http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=a29c1bad63084bbcaf5ae6a47609150e&max=3&stpid=30103
+
+  // Example of Diversey, first three trains north: 30104
+  // http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=a29c1bad63084bbcaf5ae6a47609150e&max=3&stpid=30104
+
   const apiUrl = 'https://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=a29c1bad63084bbcaf5ae6a47609150e&mapid=40380';
   const [data, setData] = useState(null);
 
