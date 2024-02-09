@@ -1,11 +1,12 @@
+import React from 'react';
+import { useEffect } from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
-import React from 'react';
-import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
-import { StationProvider } from '../components/StationContext'; // Import the StationProvider
+
+import { StationProvider } from '../components/StationContext';
 
 export {
   ErrorBoundary,
@@ -45,7 +46,7 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <StationProvider> {/* Add StationProvider here */}
+      <StationProvider>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           {/* <Stack.Screen name="search" options={{ presentation: 'modal' }} /> */}

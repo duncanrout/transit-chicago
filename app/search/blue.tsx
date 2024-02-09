@@ -1,7 +1,9 @@
+import { StyleSheet } from 'react-native';
+
 import TrainSearchLink from "../../components/StationSearchLink";
 import { View, Text } from "../../components/Themed";
-import { StyleSheet } from 'react-native';
-import { trainStations, TrainStationList } from "../../constants/TrainStations";
+
+import { trainStations } from "../../constants/TrainStations";
 
 export default function Blue() {
   const blueStations = trainStations.Blue?.length > 0 ? trainStations.Blue : ["No station available"];

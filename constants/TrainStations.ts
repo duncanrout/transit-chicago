@@ -20,14 +20,3 @@ type TrainStationList = {
 
   export { trainStations, TrainStationList };
   
-  // Example usage
-  // console.log(trainStations.Red);
-  // console.log(trainStations.Blue);
-  // console.log(trainStations.Green);
-  // console.log(trainStations.Brown);
-  // console.log(trainStations.Orange);
-  // console.log(trainStations.Pink);
-  // console.log(trainStations.Purple);
-  console.log("trainStations:", trainStations);
-
-  

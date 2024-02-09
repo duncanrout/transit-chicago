@@ -1,7 +1,8 @@
 import React from 'react';
 import { Pressable } from 'react-native';
 import { Link } from 'expo-router';
-import { useStationContext } from './StationContext'; // Import the context
+
+import { useStationContext } from './StationContext';
 
 import { Text, View } from './Themed';
 
@@ -10,12 +11,13 @@ interface TrainSearchLinkProps {
 }
 
 const TrainSearchLink: React.FC<TrainSearchLinkProps> = ({ name }) => {
-  const { setCurrentStation } = useStationContext(); // Access setCurrentStation from the context
+  const { setCurrentStation } = useStationContext();
 
   const handlePress = () => {
     // Update the current station to chosen station name
     setCurrentStation({
       stationName: name,
+      //TODO: handle colors
       colors: []
     });
   };
