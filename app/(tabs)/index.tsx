@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
-import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import { FlatList } from 'react-native-gesture-handler';
 import { Dimensions } from 'react-native';
+import { useStationContext } from '../../components/StationContext';
 /** import { TrainItem } from '../../components/TrainItem' */
 const DATA = [
   {
@@ -142,10 +142,12 @@ const Item = ({stationName}: TrainItemProps) => (
 );
 
 export default function TabOneScreen() {
+
+  const { currentStation } = useStationContext();
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-      <Text style={styles.title}>Station Name</Text>
+      <Text style={styles.title}>{ currentStation.stationName }</Text>
       
       </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
