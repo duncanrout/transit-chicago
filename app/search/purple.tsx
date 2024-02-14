@@ -3,6 +3,7 @@ import { View, Text } from "../../components/Themed";
 import { StyleSheet } from 'react-native';
 
 import { trainStations } from "../../constants/TrainStations";
+import { FlatList } from "react-native-gesture-handler";
 
 
 export default function purple() {
@@ -11,10 +12,12 @@ export default function purple() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Choose a train</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      {purpleStations.map((station, index) => (
-        <TrainSearchLink key={index} name={station}></TrainSearchLink>
-      ))}
+      <FlatList
+        style={{ margin: '5%' }}
+        data={purpleStations}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => <TrainSearchLink name={item} />}
+      />
     </View>
   );
 }

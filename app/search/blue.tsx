@@ -4,17 +4,20 @@ import TrainSearchLink from "../../components/StationSearchLink";
 import { View, Text } from "../../components/Themed";
 
 import { trainStations } from "../../constants/TrainStations";
+import { FlatList } from 'react-native-gesture-handler';
 
 export default function Blue() {
   const blueStations = trainStations.Blue?.length > 0 ? trainStations.Blue : ["No station available"];
-
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Choose a train</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      {blueStations.map((station, index) => (
-        <TrainSearchLink key={index} name={station}></TrainSearchLink>
-      ))}
+      <FlatList
+        style={{ margin: '5%' }}
+        data={blueStations}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => <TrainSearchLink name={item} />}
+      />
     </View>
   );
 }

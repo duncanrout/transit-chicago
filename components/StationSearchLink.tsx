@@ -4,7 +4,7 @@ import { Link } from 'expo-router';
 
 import { useStationContext } from './StationContext';
 
-import { Text, View } from './Themed';
+import { Text } from './Themed';
 
 interface TrainSearchLinkProps {
   name: string;
@@ -23,14 +23,15 @@ const TrainSearchLink: React.FC<TrainSearchLinkProps> = ({ name }) => {
   };
 
   return (
-    <View style={{ flex: 1, width: '100%', backgroundColor: name }}>
+    <>
       {/* Link to home screen and set currentStation state to the clicked on station */}
       <Link href={`/`} asChild>
         <Pressable onPress={handlePress}>
-          <Text>{name}</Text>
+          <Text style={{ fontSize: 50 }}>{name}</Text>
         </Pressable>
       </Link>
-    </View>
+    </>
+
   );
 };
 
