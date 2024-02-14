@@ -2,12 +2,19 @@ import TrainSearchLink from "../../components/StationSearchLink";
 import { View, Text } from "../../components/Themed";
 import { StyleSheet } from 'react-native';
 
+import { trainStations } from "../../constants/TrainStations";
+
+
 export default function pink() {
+  const pinkStations = trainStations.Pink?.length > 0 ? trainStations.Pink : ["No station available"];
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Choose a train</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <TrainSearchLink name="arglye"></TrainSearchLink>
+      {pinkStations.map((station, index) => (
+        <TrainSearchLink key={index} name={station}></TrainSearchLink>
+      ))}
     </View>
   );
 }

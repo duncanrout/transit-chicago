@@ -6,6 +6,7 @@ type TrainStationList = {
     Orange: string[];
     Pink: string[];
     Purple: string[];
+    Yellow: string[];
   };
   
   const trainStations: TrainStationList = {
@@ -15,7 +16,8 @@ type TrainStationList = {
     Brown: ["Kimball", "Kedzie", "Francisco", "Rockwell", "Western", "Damen", "Montrose", "Irving Park", "Addison", "Belmont", "Southport", "Wellington", "Diversey", "Fullerton", "Armitage", "Sedgwick", "Chicago", "Merchandise Mart", "Clark/Lake"],
     Orange: ["Midway", "Pulaski", "Kedzie", "Western", "35th/Archer", "Ashland", "Halsted", "Roosevelt", "Harold Washington Library-State/Van Buren", "LaSalle/Van Buren", "Quincy", "Washington/Wells", "Clark/Lake"],
     Pink: ["54th/Cermak", "Cicero", "Kostner", "Pulaski", "Central Park", "Kedzie", "California", "Western", "Damen", "18th", "Polk", "Ashland", "Morgan", "Clinton", "Clark/Lake"],
-    Purple: ["Linden", "Central", "Noyes", "Foster", "Davis", "Dempster", "Main", "South Blvd", "Howard"]
+    Purple: ["Linden", "Central", "Noyes", "Foster", "Davis", "Dempster", "Main", "South Blvd", "Howard"],
+    Yellow: ["Howard", 'Oakton-Skokie', 'Dempster-Skokie']
   };
 
   export { trainStations, TrainStationList };
