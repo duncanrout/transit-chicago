@@ -4,8 +4,9 @@ import { Dimensions } from 'react-native';
 
 import { Text, View } from '../../components/Themed';
 import { useStationContext } from '../../components/StationContext';
-
+import LocationFinder from '../../components/LocationFinder'
 import DATA from '../../constants/MockData';
+
 
 /** import { TrainItem } from '../../components/TrainItem' */
 
@@ -57,13 +58,16 @@ const Item = ({ stationName }: TrainItemProps) => (
   </View>
 );
 
+
 export default function TabOneScreen() {
 
   const { currentStation } = useStationContext();
+  // const { locationCurr } = LocationFinder();
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>{currentStation.stationName}</Text>
+        {LocationFinder()}
       </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text> Inbound </Text>
